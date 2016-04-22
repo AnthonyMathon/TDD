@@ -63,58 +63,71 @@ public class RomanNumerals {
 	public String convertFromRoman(String roman) {
 		if (roman == "0"){return "0";}
 		int resultat=0;
-		
-			while (roman != "" && roman.charAt(0) == 'M'){
+			if (roman == ""){return ""+resultat;}
+			while (roman.charAt(0) == 'M'){
 				roman = roman.substring(1,roman.length());
 				resultat += 1000;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'C' && roman.charAt(1)=='M'){
 				roman = roman.substring(2,roman.length());
 				resultat += 900;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0) == 'D'){
 				roman = roman.substring(1,roman.length());
 				resultat += 500;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'C' && roman.charAt(1)=='D') {
 				roman = roman.substring(2,roman.length());
 				resultat += 400;
 			}
+			if (roman == ""){return ""+resultat;}
 			while (roman != "" && roman.charAt(0) == 'C'){
 				roman = roman.substring(1,roman.length());
 				resultat += 100;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'X' && roman.charAt(1)=='C') {
 				roman = roman.substring(2,roman.length());
 				resultat += 90;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0) == 'L'){
 				roman = roman.substring(1,roman.length());
 				resultat += 50;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'X' && roman.charAt(1)=='L') {
 				roman = roman.substring(2,roman.length());
 				resultat += 40;
 			}
+			if (roman == ""){return ""+resultat;}
 			while (roman != "" && roman.charAt(0) == 'X'){
 				roman = roman.substring(1,roman.length());
 				resultat += 10;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'I' && roman.charAt(1)=='X') {
 				roman = roman.substring(2,roman.length());
 				resultat += 9;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'V') {
 				roman = roman.substring(1,roman.length());
 				resultat += 5;
 			}
+			if (roman == ""){return ""+resultat;}
 			if (roman != "" && roman.charAt(0)== 'I' && roman.charAt(1)=='V') {
 				roman = roman.substring(2,roman.length());
 				resultat += 4;
 			}
+			if (roman == ""){return ""+resultat;}
 			while (roman != "" && roman.charAt(0) == 'I'){
 				roman = roman.substring(1,roman.length());
 				resultat += 1;
+				if (roman == ""){return ""+resultat;}
 			}
 		
 		return ""+resultat;
