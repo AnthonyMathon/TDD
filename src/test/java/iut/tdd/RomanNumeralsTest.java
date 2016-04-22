@@ -5,6 +5,18 @@ import org.junit.Test;
 
 public class RomanNumeralsTest {
 
+	//tests arabic2roman
+	@Test
+	public void testzeroarabic () {
+		//Given
+		String input = "0";
+		String expected = "0";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
 	@Test
 	public void test1_I () {
 		//Given
@@ -49,7 +61,6 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
-	
 	@Test
 	public void test9_IX () {
 		//Given
@@ -171,5 +182,183 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
-
+	
+	//tests roman2arabic
+	@Test
+	public void testzeroroman () {
+		//Given
+		String input = "0";
+		String expected = "0";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testI_1 () {
+		//Given
+		String input = "I";
+		String expected = "1";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testIII_3 () {
+		//Given
+		String input = "III";
+		String expected = "3";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testIV_4 () {
+		//Given
+		String input = "IV";
+		String expected = "4";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testVII_7 () {
+		//Given
+		String input = "VII";
+		String expected = "7";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testIX_9 () {
+		//Given
+		String input = "IX";
+		String expected = "9";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testXIX_19 () {
+		//Given
+		String input = "XIX";
+		String expected = "19";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testXLIV_44 () {
+		//Given
+		String input = "XLIV";
+		String expected = "44";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testLII_52 () {
+		//Given
+		String input = "LII";
+		String expected = "52";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testXCVIII_98 () {
+		//Given
+		String input = "XCVIII";
+		String expected = "98";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testCDXXIII_423 () {
+		//Given
+		String input = "CDXXIII";
+		String expected = "423";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}	
+	@Test
+	public void testDCCXLV_745 () {
+		//Given
+		String input = "DCCXLV";
+		String expected = "745";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testCMXCIX_999 () {
+		//Given
+		String input = "CMXCIX";
+		String expected = "999";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testMMMCDLXXXIII_3483 () {
+		//Given
+		String input = "MMMCDLXXXIII";
+		String expected = "3483";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testMMMCMXCIX_3999 () {
+		//Given
+		String input = "MMMCMXCIX";
+		String expected = "3999";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void testMMMMCDXC_4490() {
+		//Given
+		String input = "MMMMCDXC";
+		String expected = "4490";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	
 }
