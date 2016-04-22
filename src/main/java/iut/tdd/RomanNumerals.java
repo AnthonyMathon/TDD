@@ -3,7 +3,7 @@ package iut.tdd;
 public class RomanNumerals {
 	public String convertToRoman(String arabe) {
 		String resultat = "";
-		if (arabe == "0"){return "0";}
+		if (arabe == "0" || arabe == ""){return "0";}
 		while (Integer.parseInt(arabe)>=1000){
 			resultat = resultat+"M";
 			arabe = ""+ (Integer.parseInt(arabe)-1000);
